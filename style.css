@@ -1,0 +1,12 @@
+.palette {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.palette-color {
+    height: 150px;
+    flex: 1;
+    background-color: #ccc;
+    border-radius: 10px;
+}
