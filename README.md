@@ -15,3 +15,4 @@
 - [CSS](#css)
 - [Git](#git)
 - [GitHub Pages](#github)
+- [Google Gemini API](#api)
