@@ -1,13 +1,12 @@
-# Coding Playground
-**Coding Playground** is repository which intended for publishing **practical** projects and **for experimentation**.
+# AI Mood Palette
+
+## Project description 
+**AI Mood Palette** A project in which I created a website with a text input field for users. The user must enter a description (for example, their mood or a specific object), and the website, using Google Gemini, will provide the five colors that best match the description, along with a HEX code.
 
 ## CONTENTS
 - [Project description](#project-description)
 - [Technologies](#technologies)
 - [How to run](#how-to-run)
-
-## Project description 
-**Coding Playground** - repository that focuses on practical and experimental solutions to problems related to the project.
 
 ## Technologies
 - [HTML5](#html5)
