@@ -29,6 +29,7 @@ generateBtn.addEventListener('click', () => {
 
         .then(data => {
             console.log(data);
+            const jsonString = data.candidates[0].content.parts[0].text;
             const cleanText = jsonString.replace(/```json|```/g, '');
             const colors = JSON.parse(cleanText);
 
