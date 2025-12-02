@@ -9,80 +9,118 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: 'Inter', sans-serif;
+    margin: 0;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-
-    height: 100vh;
-    width: 100vw;
+    justify-content: center;
+    min-height: 100vh;
 }
-
 
 .container {
     width: 90%;
     max-width: 800px;
+    text-align: center;
 }
 
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 
+/* --- ПАНЕЛЬ ВВОДА --- */
+.input-group {
+    display: flex;
+    flex-direction: row;
+    /* Элементы в ряд */
+    gap: 15px;
+    /* Отступ между ними */
+
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Поле ввода */
+#prompt {
+    flex-grow: 1;
+    /* Растягивается */
+    height: 60px;
+    resize: none;
+    /* Убирает треугольник */
+
+    border-radius: 15px;
+    border: none;
+    padding: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Кнопка */
+#generate-btn {
+    flex-shrink: 0;
+    /* Не сжимается */
+    height: 60px;
+    /* Высота как у поля */
+    width: auto;
+
+    background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#generate-btn:active {
+    transform: scale(0.95);
+}
+
+/* --- ПАЛИТРА --- */
 .palette {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 15px;
+    height: 150px;
+    width: 100%;
 }
 
 .palette-color {
-    height: 150px;
     flex: 1;
-    background-color: #ccc;
-    border-radius: 10px;
-}
-
-
-
-.input-group {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 
     display: flex;
+    align-items: center;
     justify-content: center;
-    flex-direction: row;
-    gap: 15px;
 
-    background-color: rgba(255, 255, 255, 0.263);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.input-group__textarea {
-    resize: none;
-    width: 100%;
-    /* Растягиваем на всю ширину контейнера */
-    height: 60px;
-    /* Фиксируем высоту */
+/* Мобильная версия */
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
 
-    /* Немного красоты */
-    border-radius: 10px;
-    border: none;
-    padding: 10px;
-    font-family: 'Inter', sans-serif;
-    /* Чтобы шрифт внутри был такой же красивый */
-}
+    .palette {
+        flex-direction: column;
+        height: auto;
+    }
 
-#input-group__btn {
-    /* background-color: #6c5ce7; */
-    background: linear-gradient(45deg, #6c5ce7, #a29bfe);
-    color: #ffffff;
-    border: none;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-
-    transition: transform 0.2s;
-}
-
-.input-group .input-group__btn:active {
-    transform: scale(0.95);
+    .palette-color {
+        height: 80px;
+    }
 }
