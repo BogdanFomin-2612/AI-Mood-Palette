@@ -15,7 +15,7 @@ const promptInput = document.getElementById('prompt');
 const generateBtn = document.getElementById('generate-btn'); // Теперь точно совпадает с HTML
 
 generateBtn.addEventListener('click', () => {
-    console.log("Кнопка нажата!"); // Проверка в консоли
+    console.log("The button is pressed!"); // Проверка в консоли
 
     const prompt = `Не отвечай словами, в ответ на мой вопрос я жду исключительно JSON массив из 5 цветов в формате HEX, которые по твоему мнению лучше всего подходят под это описание: ${promptInput.value}`;
 
@@ -55,5 +55,5 @@ generateBtn.addEventListener('click', () => {
             // 4. Красим кнопку
             generateBtn.style.background = `linear-gradient(45deg, ${colors[1]}, ${colors[2]})`;
         })
-        .catch(error => console.error('Ошибка:', error));
+        .catch(error => console.error('Error:', error));
 });
