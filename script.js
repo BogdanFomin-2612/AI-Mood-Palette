@@ -34,6 +34,11 @@ generateBtn.addEventListener('click', () => {
             const colors = JSON.parse(cleanText);
 
             console.log(colors);
+
+            const colorDivs = document.querySelectorAll('.palette-color');
+            colors.forEach((color, index) => {
+                colorDivs[index].style.backgroundColor = color;
+            });
         })
 
 });
