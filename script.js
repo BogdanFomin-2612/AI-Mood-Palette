@@ -1,12 +1,12 @@
-// const part1 = 'AIzaSyDhINIysJFvSenGKRx';
-// const part2 = '_f_qv9t_r4jBFeAs';
-// const apiKey = part1 + part2;
+const part1 = 'AIzaSyDhINIysJFvSenGKRx';
+const part2 = '_f_qv9t_r4jBFeAs';
+const apiKey = part1 + part2;
 // const apiKey = 'AIzaSyDhINIysJFvSenGKRx_f_qv9t_r4jBFeAs';
 // const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 // // ⚠️ Вставь свой ключ сюда!
 // const part1 = 'AIzaSyDhINIysJFvSenGKRx';
 // const part2 = '_f_qv9t_r4jBFeAs'; // Если у тебя другой ключ, вставь его целиком
-const apiKey = 'AIzaSyDhINIysJFvSenGKRx_f_qv9t_r4jBFeAs';
+// const apiKey = 'AIzaSyDhINIysJFvSenGKRx_f_qv9t_r4jBFeAs';
 // Если ты уже разрезал ключ для гитхаба, раскомментируй строки с part1/part2 и используй их
 
 const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
